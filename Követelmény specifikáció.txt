@@ -1,0 +1,24 @@
+Követelmény specifikáció:
+
+Jelenlegi helyzet: Nincsen angol-magyar gyakorló alkalmazásunk
+
+Vágyálom rendszer: Egy olyan rendszert szeretnénk, ahol gyakorló módban angol és magyar szavak jelennek meg a képernyőm, amelyeket össze lehet párosítani és ellenőrízni, hogy helyesek-e a párosítások. Továbbá szeretnénk, hogy a szópárok adatbázisa bővíthető legyen további szavakkal és kifejezésekkel a felhasználó által.
+
+Követelménylista:
+
+	Szópárok 1.0
+
+	A felhasználó beállíthatja, hogy mennyi kifejezés jelenjen meg a képernyőn.
+	3-7 intervallumon lehet a szópárok mennyisége.
+
+	Gyakorló mód 1.0
+
+	A felhasználó átléphet egy gyakorló módba, amikor nem változhat a szavak listája,
+	a képernyőn lévő szavakat ebben a módban lehet párosítani egymáshoz.
+	A képernyőn van 'Következő', 'Ellenőrzés' és 'Vége' gomb.
+
+	Kifejezések kezelése 1.0
+
+	A felhasználónak van lehetősége kifejezéseket hozzáadni a lehetséges szavak listájához.
+	Legyen lehetősége törölni a listából.
+
