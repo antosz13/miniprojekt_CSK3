@@ -1,1 +1,60 @@
+Rendszerterv: Angol-Magyar Szótár Gyakorló Program
+1. Áttekintés
+Ez a rendszer egy JavaFX alapú alkalmazást tartalmaz, amely segíti a felhasználókat angol-magyar szópárok gyakorlásában. Az alkalmazás a felhasználó által megadott szópárokat kezeli és interaktív módon megjeleníti azokat. A felhasználók tesztelhetik tudásukat a magyar fordítások kiválasztásával egy legördülő menüből, és az alkalmazás ellenőrzi, hogy helyesek-e a válaszaik. Ezen kívül egy "tanulási mód" is elérhető, ahol új szópárok adhatók hozzá az alkalmazáshoz.
+
+2. Funkcionális követelmények
+A felhasználók megadhatják a szópárokat az alkalmazás indításakor.
+Az alkalmazás legördülő menüket jelenít meg, amelyekből a felhasználó kiválaszthatja a helyes magyar fordítást.
+A felhasználó által választott szavak ellenőrizhetők, és a helyes válaszokat visszajelzi az alkalmazás.
+A felhasználók beállíthatják, hogy hány szópárt szeretnének egyszerre látni egy csúszka segítségével.
+A program a felhasználó által helyesen megválaszolt szópárokat kiveszi a megjelenítendő listából, és újabbakat tölt be, ha még vannak szópárok.
+Kilépés megerősítését kérő ablak biztosítása a vége gomb megnyomásakor.
+3. Nem funkcionális követelmények
+Felhasználói felület: Egyszerű, jól átlátható grafikus felület.
+Teljesítmény: A program legyen képes több tucat szópár kezelésére késleltetés nélkül.
+Bővíthetőség: Könnyen hozzáadhatók új szópárok a programhoz.
+Karbantarthatóság: A rendszer komponenseinek szétválasztása a könnyebb karbantartás érdekében.
+4. Rendszerarchitektúra
+A program egy háromrétegű architektúrát követ, ahol a rétegek egymástól elkülönítve működnek.
+
+Prezentációs réteg: A JavaFX alapú grafikus felhasználói felület, amely a felhasználókkal való interakcióért felel.
+
+SzotarController: A grafikus interfész működését vezérli. Itt történik a felhasználói bemenetek kezelése, a szópárok megjelenítése, valamint az ellenőrzés és a visszajelzések biztosítása.
+Alkalmazáslogika réteg: A program üzleti logikája.
+
+SzotarfxApp: Az alkalmazás fő belépési pontja, amely inicializálja a programot és a vezérlőt.
+Adatkezelés (Model) réteg: A szópárok kezelését végző osztályok.
+
+Szotar: Ez az osztály tartja nyilván a szópárokat egy listában.
+Szopar: Az angol-magyar szópárok tárolására szolgál.
+5. Adatmodell
+Az alkalmazás két fő adatszerkezetet használ:
+
+Szotar: Egy listát tartalmaz, amely szópárokat tárol (angol és magyar megfelelőiket).
+Szopar: Az egyes angol-magyar szópárokat egy-egy objektumként kezeli, két adattaggal (angol szó, magyar szó).
+6. Felhasználói felület (UI) terv
+A felhasználói felület a következő elemeket tartalmazza:
+
+Szópár megjelenítés: Egy táblázatszerű elrendezés, ahol a bal oldalon az angol szavak szerepelnek, a jobb oldalon pedig legördülő menük, amelyek a magyar fordítások kiválasztását teszik lehetővé.
+Ellenőrzés gomb: A felhasználó az "Ellenőrzés" gombbal ellenőrizheti a választott fordítások helyességét.
+Következő gomb: A következő szópárok betöltésére szolgál.
+Csúszka: Beállítható, hogy hány szópár jelenjen meg egyszerre.
+Vége gomb: A program bezárására szolgál, kilépési megerősítéssel.
+7. Komponensek közötti kapcsolatok
+SzotarController kezeli a felhasználói bemenetet, és meghívja a Szotar osztály metódusait a szópárok megjelenítéséhez.
+A Szopar osztály objektumai a Szotar osztályban tárolódnak, és a megjelenítéshez a vezérlő által kérdezhetők le.
+8. Fejlesztési környezet
+Programozási nyelv: Java
+Grafikus keretrendszer: JavaFX
+Fejlesztői környezet: IntelliJ IDEA vagy más Java-fejlesztői környezet.
+9. Tesztelés
+A rendszer tesztelése manuálisan és Junit-tal történik:
+
+Egységtesztelés: A szópárok megfelelő tárolásának és betöltésének ellenőrzése.
+Integrációs teszt: A vezérlő és a modellek megfelelő együttműködésének ellenőrzése.
+Felhasználói tesztelés: A felhasználói felület hibamentes működésének ellenőrzése (pl. helyes válaszok visszajelzése, új szópárok hozzáadása).
+Ezek mellett a program tartalmaz Junit teszteket.
+10. Kockázatelemzés
+Felhasználói bemenet kezelése: Nem megfelelő felhasználói bemenetek esetén (pl. üres mezők) a program leállhat. Ezt hibakezeléssel kell megakadályozni.
+Nagy adatbázis kezelése: Sok szópár esetén a felület és a teljesítmény tesztelése szükséges.
 
