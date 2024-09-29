@@ -9,3 +9,6 @@ Ellenőrzés: Az ellenőrzés gomb hatására a választott szópárok helyessé
 Következő gomb: A következő gomb 'disabled' állapotban van, amíg az ellenőrzés meg nem történt. A gomb megnyomására új véletlenszerű szópárok jelennek meg a képernyőn, a megadott mennyiségben.
 
 Vége gomb: A vége gomb megnyomására véget ért a gyakorlás, a program bezár.
+
+Használati esetek:
+![usecase](https://github.com/user-attachments/assets/9ef033c5-9882-44d3-9ed3-077a529d4c76)
